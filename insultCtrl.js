@@ -4,14 +4,21 @@ function InsultCtrl() {
    this.derogatoryNouns = ['apple-john', 'baggage', 'barnacle', 'bladder', 'boar-pig', 'bugbear', 'bum-bailey', 'canker-blossom', 'clack-dish', 'clotpole', 'coxcomb', 'codpiece', 'death-token', 'dewberry', 'flap-dragon', 'flax-wench', 'flirt-gill', 'foot-licker', 'fustilarian', 'giglet', 'gudgeon', 'haggard', 'harpy', 'hedge-pig', 'horn-beast', 'hugger-mugger', 'jolthead', 'lewdster', 'lout', 'maggot-pie', 'malt-worm', 'mammet', 'measle', 'minnow', 'miscreant', 'moldwarp', 'mumble-news', 'nut-hook', 'pigeon-egg', 'pignut', 'puttock', 'pumpion', 'ratsbane', 'scut', 'skainsmate', 'strumpet', 'varlet', 'vassal', 'whey-face', 'wagtail'];
    
    this.insult = this.generateInsult();
-}
+} 
 
-angular.module('insultApp').controller('InsultCtrl', InsultCtrl);
-
+ 
 InsultCtrl.prototype.generateInsult = function() {
   var randomAdjective1 = this.primaryAdjectives[Math.floor(Math.random()*this.primaryAdjectives.length)];
   var randomAdjective2 = this.secondaryAdjectives[Math.floor(Math.random()*this.secondaryAdjectives.length)];
   var randomNoun = this.derogatoryNouns[Math.floor(Math.random()*this.derogatoryNouns.length)];
   
   return randomAdjective1 + ' ' + randomAdjective2 + ' ' + randomNoun;
+
 }
+
+InsultCtrl.prototype.replaceInsult = function (){
+    // console.log('replaceInsult');
+    this.insult = this.generateInsult();
+}
+
+app.controller('InsultCtrl', InsultCtrl);
