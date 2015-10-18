@@ -9,4 +9,4 @@ var app = angular.module('insultApp', []);
 // 5. Move the functionality for generating an insult out of the InsultCtrl and into the InsultService. The InsultCtrl's replaceInsult() function should now call the generateInsult() function on the service.
 // 6. Inject this service into the insultCtrl controller.
 // 7. Replace InsultCtrl's generateInsult() function with a function that calls your InsultService's insult generator function and displays the new insult.
-// Make the InsultCtrl safe for minification. Test it out by minifying it here http://jscompress.com/ and swapping out the original unminified code.
+// 8. Make the InsultCtrl safe for minification. Test it out by minifying it here http://jscompress.com/ and swapping out the original unminified code.
