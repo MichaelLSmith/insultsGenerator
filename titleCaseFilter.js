@@ -22,25 +22,16 @@ function titleCase(){
         //for in loops know when to stop. But it outputs the index rather than the element. In other languages it grabs the element.
 
         var newString = '';
-
         for(i in inputString){
             // console.log(inputString[i]);
             if(i == 0 || inputString[i-1] == ' ' || inputString[i-1] == '-'){
                 newString += inputString[i].toUpperCase();
-
-                // console.log('T');
-                // // console.log(inputString);
-                // console.log(inputString[i]);
-                // inputString.toUpperCase();
             }
             else{newString += inputString[i]; }
         }
-
         return newString;
     }
 }
-
-
 // this.run = function(inputString){
 //     return inputString
 // }
